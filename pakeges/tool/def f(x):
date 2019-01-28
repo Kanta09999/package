@@ -1,0 +1,15 @@
+path = os.listdir('./pnt')
+for i in path :
+	if i in './.DS_Store' :
+		continue
+	path_s = os.listdir(path + '/' + i + '/')
+	for j in path_s :
+		path_t = os.listdir(path + '/' + i + '/' + j + '/')
+		for k in path_t :
+			name =  path + '/' + i + '/' + j + '/' + k
+			print(name)
+			file = open(name)
+			data = file.read()
+			print(data)
+
+str = str.replace('/', "\n")
